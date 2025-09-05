@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Host @ MANUU</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      background: #29d4ee;
+      color: white;
+      padding: 20px;
+    }
+    header img {
+      height: 50px;
+      border-radius: 8px;
+    }
+    header h2 {
+      margin: 0;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    /* ---------- Container ---------- */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #4f46e5;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    /* ---------- Certificate Grid ---------- */
+    .certificates {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .certificate-card {
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .certificate-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .certificate-card h3 {
+      margin-top: 0;
+      color: #4f46e5;
+    }
+    .certificate-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .certificate-card img {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 10px;
+      border: 2px solid #eee;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .certificate-card img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ---------- Mobile Responsive ---------- */
+    @media (max-width: 768px) {
+      .certificates {
+        grid-template-columns: 1fr; /* stack vertically */
+      }
+    }
+
+    /* ---------- Button ---------- */
+    .btn-back {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #4f46e5;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: 0.3s;
+    }
+    .btn-back:hover {
+      background: #3730a3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Logo + Title -->
+  <header>
+    <img src="images/manuu-logo.png" alt="MANUU Logo">
+    <h2>Maulana Azad National Urdu University</h2>
+  </header>
+
+  <!-- Certificate Showcase -->
+  <div class="container">
+    <h1>Event Host & Volunteer Certificates</h1>
+    <p>
+      During my journey at MANUU, I had the privilege to actively participate 
+      and contribute to multiple college-level events. These opportunities 
+      helped me grow in confidence, teamwork, coordination, and leadership skills.
+    </p>
+
+    <!-- Certificates Grid -->
+    <div class="certificates">
+
+      <!-- Certificate 1 -->
+      <div class="certificate-card">
+        <h3>Azad Day Celebration (2023)</h3>
+        <p>
+          As a Drama Club volunteer, I contributed to the 
+          <b>indoor decoration management</b> during Azad Day 2023. 
+          This role gave me the chance to collaborate with peers and 
+          showcase creativity in event management.
+        </p>
+        <img src="images/Azad-D-C.png"alt="Azad Day 2023 Certificate">
+      </div>
+
+      <!-- Certificate 2 -->
+      <div class="certificate-card">
+        <h3>Jashn-e-Bahara (2024)</h3>
+        <p>
+          In 2024, I volunteered in <b>Volleyball Game Management</b> 
+          during Jashn-e-Bahara sports fest. This experience enhanced 
+          my <b>coordination, responsibility, and teamwork</b> skills 
+          while working with the sports committee.
+        </p>
+        <img src="certificate-2024.jpg" alt="Jashn-e-Bahara 2024 Certificate">
+      </div>
+
+    </div>
+
+    <a href="index.html" class="btn-back">⬅ Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

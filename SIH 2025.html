@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIH Project - Digital Learning Platform</title>
+<style>
+  /* ---------- Base Styling ---------- */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* White theme */
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { color: #004080; }
+  a { color: #004080; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Container ---------- */
+  .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  /* ---------- Project Header ---------- */
+  .project-header {
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    gap:15px; 
+    margin-bottom: 30px;
+  }
+  .project-header h1 { font-size: 28px; margin:0; }
+  .project-header p { font-size: 15px; color: #444; margin:4px 0 0; }
+
+  /* ---------- Short Description ---------- */
+  .short-description {
+    background: #f2f8ff;
+    border-left: 4px solid #004080;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+  }
+
+  /* ---------- Certificate ---------- */
+  .certificate { margin: 20px 0; text-align: center; }
+  .certificate img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor:pointer;
+  }
+  .certificate img:hover { transform: scale(1.05); }
+
+  /* ---------- Gallery ---------- */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 30px; }
+  .gallery img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor:pointer;
+  }
+  .gallery img:hover { transform: scale(1.05); }
+
+  /* ---------- Team Members ---------- */
+  .team { margin-bottom: 30px; }
+  .team h2 { margin-bottom: 15px; }
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  .member {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 8px;
+  }
+  .member:hover { transform: translateY(-5px); }
+
+  /* ---------- Detailed Description ---------- */
+  .detailed-description {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    margin-top: 50px;
+    padding: 30px 20px 15px;
+    background: #f2f2f2;
+    border-top: 1px solid #ddd;
+  }
+  .footer-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; }
+  .footer-left h2 { margin:0; font-size:20px; color:#004080; }
+  .footer-left p { margin:6px 0 0; font-size:14px; color:#444; }
+  .footer-links, .footer-socials { display:flex; gap:16px; flex-wrap:wrap; }
+  .footer-links a, .footer-socials a { font-size:14px; color:#004080; transition: color 0.3s ease; }
+  .footer-links a:hover, .footer-socials a:hover { color:#0073e6; }
+  .footer-bottom { margin-top:20px; text-align:center; font-size:13px; color:#555; border-top:1px solid #ccc; padding-top:10px; }
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:600px){
+    .project-header h1 { font-size:22px; }
+    .team-members { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Project Header with SIH Logo -->
+  <div class="project-header">
+    <img src="/images/SIH_logo-removebg-preview.png" alt="SIH Logo" style="height:50px;"> <!-- SIH Logo -->
+    <div>
+      <h1>Digital Learning Platform for Rural School Students in Nabha</h1>
+      <p><strong>ID:</strong> SIH25020 | <strong>Theme:</strong> Smart Education | <strong>Organisation:</strong> Government of Punjab</p>
+    </div>
+  </div>
+
+  <!-- Short Description -->
+  <div class="short-description">
+    <p>Our team developed a digital learning platform aimed at empowering rural school students in Nabha by providing accessible, engaging, and interactive educational resources.</p>
+  </div>
+
+  <!-- Team Members Section -->
+  <div class="team">
+    <h2>Team Members</h2>
+    <div class="team-members">
+      <div class="member"><img src="team1.jpg" alt="Member 1"><p><b>Hedayatullah Noor</b><br>Lead</p></div>
+      <div class="member"><img src="team2.jpg" alt="Member 2"><p><b>Md Wasim Ibrar</b><br>Frontend</p></div>
+      <div class="member"><img src="team3.jpg" alt="Member 3"><p><b>Saif Khan</b><br>Mobile App</p></div>
+      <div class="member"><img src="team4.jpg" alt="Member 4"><p><b>Md Hanzala</b><br>Backend</p></div>
+      <div class="member"><img src="team5.jpg" alt="Member 5"><p><b>Mohammad Sahil Shaikh</b><br>Data Analysis</p></div>
+      <div class="member"><img src="images/team6.jpg" alt="Member 6"><p><b>Bushra Parween</b><br>UX/UI</p></div>
+    </div>
+  </div>
+
+  <!-- Certificate Section -->
+  <div class="certificate">
+    <h2>Certificate of Participation</h2>
+    <img src="images/sihcertificate.jpg" alt="Wasim Ibrar-SIH Certificate">
+  </div>
+
+  <!-- Gallery Section -->
+  <h2>Project Gallery</h2>
+  <div class="gallery">
+    <!-- <img src="/images/P-photo1.jpg" alt="Project Photo 1"> -->
+    <img src="/images/P-photo2.jpg" alt="Project Photo 2">
+    <img src="/images/P-photo4.jpg" alt="Project Photo 3">
+    <img src="/images/P-photo3.jpg" alt="Project Photo 4">
+    <!-- <img src="/images/P-photo5.jpg" alt="Project Photo 5"> -->
+  </div>
+
+  <!-- Detailed Description -->
+  <div class="detailed-description">
+    <h2>Detailed Description</h2>
+    <p>
+      This project was designed as part of the Smart India Hackathon under the Smart Education theme.
+      Our objective was to build a <b>Digital Learning Platform</b> tailored for rural school students in Nabha.  
+      The platform integrates features such as:
+    </p>
+    <ul>
+      <li>Interactive video lectures and quizzes for better engagement.</li>
+      <li>Offline access for areas with low internet connectivity.</li>
+      <li>Localized content in regional languages.</li>
+      <li>Progress tracking for students and teachers.</li>
+    </ul>
+    <p>
+      The initiative, mentored by the Government of Punjab, highlights the importance of bridging the digital divide
+      and ensuring every student has equal access to quality education. Our team collaborated effectively to
+      ideate, design, and prototype a solution that can make a real impact on rural education.
+    </p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>Wasim Ibrar</h2>
+      <p>IT Student & Digital Content Creator</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#Projects">Projects</a>
+      <a href="index.html#contactForm">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/ibrarquraishi78/" target="_blank">Instagram</a>
+      <a href="https://linktr.ee/ibrarquraishi78" target="_blank">Linktree</a>
+      <a href="mailto:business.ibrar@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Wasim Ibrar. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

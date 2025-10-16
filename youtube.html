@@ -122,6 +122,62 @@
       cursor: pointer;
       font-weight: bold;
     }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      margin-top: 60px;
+      padding: 30px 20px 15px;
+      background: #f2f2f2;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-left h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #004080;
+    }
+
+    .footer-left p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .footer-links,
+    .footer-socials {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a,
+    .footer-socials a {
+      font-size: 14px;
+      color: #004080;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover,
+    .footer-socials a:hover {
+      color: #0073e6;
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #555;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
     @media (max-width: 768px) {
       .video-card {
         flex: 1 1 100%;
@@ -215,7 +271,7 @@
 
     <!-- Buttons -->
     <a href="https://wasim-ibrar.vercel.app/" target="_blank" class="btn-visit">📺 Visit My YouTube Website</a><br>
-    <a href="index.html" class="btn-back">⬅ Back to Portfolio</a>
+    <a href="index.html#Projects" class="btn-back">⬅ Back to Portfolio</a>
   </div>
 
   <!-- Lightbox Modal -->
@@ -223,6 +279,29 @@
     <span class="close" onclick="closeVideo()">&times;</span>
     <iframe id="videoFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Wasim Ibrar</h2>
+        <p>IT Student & Digital Content Creator</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#Projects">Projects</a>
+        <a href="index.html#contactForm">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/ibrarquraishi78/" target="_blank">Instagram</a>
+        <a href="https://linktr.ee/ibrarquraishi78" target="_blank">Linktree</a>
+        <a href="mailto:business.ibrar@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Wasim Ibrar. All Rights Reserved.
+    </div>
+  </footer>
 
   <!-- JavaScript for Lightbox -->
   <script>

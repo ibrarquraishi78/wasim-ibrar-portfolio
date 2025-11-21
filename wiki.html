@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wasim Ibrar — Portfolio (Wikipedia style)</title>
+  <style>
+    /* Simple Wikipedia-like styling */
+    :root{
+      --max-width: 1000px;
+      --infobox-width: 300px;
+      --muted: #6a6a6a;
+      --link: #0645ad;
+      --border: #a2a9b1;
+      --bg: #fff;
+      --paper: #f8f9fa;
+      font-family: "Linux Libertine", Georgia, "Times New Roman", serif;
+    }
+    html,body{background:#f6f6f6;color:#111;margin:0;padding:20px;}
+    .container{max-width:var(--max-width);margin:0 auto;background:var(--bg);padding:26px;border:1px solid var(--border);box-shadow:0 1px 0 rgba(0,0,0,0.04);}
+    h1{font-size:28px;margin:0 0 6px;}
+    .subtitle{color:var(--muted);margin:0 0 18px;font-size:14px;}
+    .layout{display:flex;gap:28px;align-items:flex-start;}
+    .main{flex:1;min-width:0;}
+    .infobox{width:var(--infobox-width);border:1px solid var(--border);padding:12px;background:var(--paper);font-size:14px;line-height:1.4;}
+    .infobox img{width:100%;height:auto;display:block;margin-bottom:10px;border:1px solid #d7d7d7}
+    .infobox table{width:100%;border-collapse:collapse;}
+    .infobox .label{color:var(--muted);padding:6px 0;font-weight:700;}
+    .infobox a{color:var(--link);text-decoration:none;}
+    .toc{border:1px solid var(--border);padding:8px;background:#fff;margin-bottom:16px;font-size:14px;}
+    .toc h2{font-size:16px;margin:0 0 8px;}
+    .toc ul{margin:0;padding-left:18px;}
+    section{margin-bottom:18px;}
+    h2.section-title{font-size:18px;border-bottom:1px solid #e1e1e1;padding-bottom:6px;margin-top:0;}
+    p{margin:0 0 10px;}
+    ul{margin:0 0 10px;padding-left:18px;}
+    .muted{color:var(--muted);font-size:14px;}
+    a{color:var(--link)}
+    .links-list a{display:inline-block;margin-right:10px;margin-bottom:6px}
+    .reference{font-size:13px;color:var(--muted);border-top:1px solid #eee;padding-top:10px;margin-top:10px;}
+    .badge{display:inline-block;background:#eef;font-size:12px;padding:2px 6px;border-radius:3px;margin-right:6px;color:#054;}
+    footer{font-size:13px;color:var(--muted);border-top:1px solid #eee;padding-top:12px;margin-top:18px;}
+    /* responsive */
+    @media (max-width:900px){
+      .layout{flex-direction:column;}
+      .infobox{width:100%;}
+    }
+    /* small util */
+    .mono{font-family:monospace;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>Wasim Ibrar (Md Wasim Ibrar)</h1>
+      <div class="subtitle">Digital Creator • Tech Educator • Author — Focus: AI, Technology, Science & Educational Projects</div>
+    </header>
+
+    <div class="layout">
+      <aside class="infobox" aria-label="Infobox">
+        <!-- Placeholder image - replace with your portrait if desired -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="Wasim Ibrar — portrait placeholder">
+        <table>
+          <tr><td class="label">Full name</td><td>Md Wasim Ibrar</td></tr>
+          <tr><td class="label">Also known as</td><td>Wasim Ibrar</td></tr>
+          <tr><td class="label">Born</td><td>07 November 2007</td></tr>
+          <tr><td class="label">Age</td><td>17</td></tr>
+          <tr><td class="label">Hometown</td><td>Darbhanga, Bihar, India</td></tr>
+          <tr><td class="label">Nationality</td><td>Indian</td></tr>
+          <tr><td class="label">Religion</td><td>Muslim</td></tr>
+          <tr><td class="label">Occupation</td><td>Digital Creator; Author; Tech Educator; Web Developer</td></tr>
+          <tr><td class="label">Primary topics</td><td>AI, Technology, Science, Education, Future Careers</td></tr>
+          <tr><td class="label">Email</td><td><a href="mailto:business.ibrar@gmail.com">business.ibrar@gmail.com</a></td></tr>
+        </table>
+
+        <hr style="margin:10px 0">
+
+        <div class="label">Official links</div>
+        <div class="links-list">
+          <a href="https://wasim-ibrar-portfolio.netlify.app" target="_blank" rel="noopener">Portfolio site</a><br>
+          <a href="https://wasim-ibrar.vercel.app/" target="_blank" rel="noopener">YouTube-inspired site</a><br>
+          <a href="https://wasim-ibrar-diaries.vercel.app/" target="_blank" rel="noopener">Travel & Diaries</a><br>
+          <a href="https://linktr.ee/ibrarquraishi78" target="_blank" rel="noopener">Linktree</a><br>
+          <a href="https://www.amazon.com/author/wasimibrar" target="_blank" rel="noopener">Amazon author page</a><br>
+          <a href="https://www.youtube.com/@ibrarquraishi78" target="_blank" rel="noopener">YouTube: ibrarquraishi78</a><br>
+          <a href="https://www.instagram.com/ibrarquraishi78" target="_blank" rel="noopener">Instagram: @ibrarquraishi78</a>
+        </div>
+      </aside>
+
+      <main class="main">
+        <nav class="toc" aria-label="Table of contents">
+          <h2>Contents</h2>
+          <ul>
+            <li><a href="#short-bio">Short bio</a></li>
+            <li><a href="#early-life">Early life</a></li>
+            <li><a href="#career">Career & Work</a></li>
+            <li><a href="#book">Book</a></li>
+            <li><a href="#projects">Selected projects</a></li>
+            <li><a href="#media">Media & Online presence</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#references">References & external links</a></li>
+          </ul>
+        </nav>
+
+        <section id="short-bio">
+          <h2 class="section-title">Short bio</h2>
+          <p><strong>Wasim Ibrar</strong> (Md Wasim Ibrar) is an Indian digital creator, technology educator, and author. He produces short-form educational videos and builds web projects that make complex topics in artificial intelligence, technology, and science accessible to students and beginners. He is the author of the book <em>The Future of AI: How to Learn, Work, and Earn with Artificial Intelligence</em>.</p>
+        </section>
+
+        <section id="early-life">
+          <h2 class="section-title">Early life</h2>
+          <p>Wasim was born on <strong>07 November 2007</strong> and hails from <strong>Darbhanga, Bihar</strong>, India. From an early age he showed interest in technology, web development, and explaining technical concepts to peers.</p>
+        </section>
+
+        <section id="career">
+          <h2 class="section-title">Career & Work</h2>
+          <p>Wasim works as a content creator and developer focusing on:</p>
+          <ul>
+            <li>Artificial Intelligence education for beginners</li>
+            <li>Short-form explanatory videos (YouTube Shorts)</li>
+            <li>Web development projects, including API-driven websites and portfolio sites</li>
+            <li>Practical guides and resources to help students prepare for technology-focused careers</li>
+          </ul>
+          <p class="muted">He aims to simplify technical knowledge and inspire young learners to build practical digital skills.</p>
+        </section>
+
+        <section id="book">
+          <h2 class="section-title">Book</h2>
+          <p><strong>Title:</strong> <em>The Future of AI: How to Learn, Work, and Earn with Artificial Intelligence</em></p>
+          <p><strong>About the book:</strong> A beginner-friendly guide for students and young learners that explains fundamentals of AI, the impact of AI on future jobs, and practical steps to build applicable AI skills and career pathways.</p>
+          <p><strong>Availability:</strong> The book is available on Amazon in both <em>paperback</em> and <em>Kindle eBook</em> editions.</p>
+          <p><strong>Purchase & author page:</strong> <a href="https://www.amazon.com/author/wasimibrar" target="_blank" rel="noopener">https://www.amazon.com/author/wasimibrar</a></p>
+        </section>
+
+        <section id="projects">
+          <h2 class="section-title">Selected projects</h2>
+          <ul>
+            <li><strong>YouTube-inspired website:</strong> A fully responsive site that auto-fetches content using the YouTube API and mirrors Ali Abdaal’s UI structure. Hosted at <a href="https://wasim-ibrar.vercel.app/" target="_blank" rel="noopener">https://wasim-ibrar.vercel.app/</a>.</li>
+            <li><strong>Personal portfolio website:</strong> Interactive portfolio with contact form and resume download functionality. Hosted at <a href="https://wasim-ibrar-portfolio.netlify.app" target="_blank" rel="noopener">https://wasim-ibrar-portfolio.netlify.app</a>.</li>
+            <li><strong>Travel diaries:</strong> A travel memory website with dynamic trip cards and detailed trip pages. Hosted at <a href="https://wasim-ibrar-diaries.vercel.app/" target="_blank" rel="noopener">https://wasim-ibrar-diaries.vercel.app/</a>.</li>
+            <li><strong>Real-time expense-sharing app:</strong> Chat-style app with Firebase Realtime Database for live syncing.</li>
+            <li><strong>Multiple YouTube Shorts:</strong> Topics include: "How AI Chatbot Works", "What Does NVIDIA Do?", "What is Nanotechnology?", "Mind Reading AI", and "Lucid Dreaming Explained: Kya Inception Jaisi Dream Machine Real Hai?"</li>
+          </ul>
+        </section>
+
+        <section id="media">
+          <h2 class="section-title">Media & online presence</h2>
+          <p>Primary online platforms and official links are:</p>
+          <ul>
+            <li><strong>YouTube channel:</strong> <a href="https://www.youtube.com/@ibrarquraishi78" target="_blank" rel="noopener">ibrarquraishi78</a></li>
+            <li><strong>Instagram:</strong> <a href="https://www.instagram.com/ibrarquraishi78" target="_blank" rel="noopener">@ibrarquraishi78</a></li>
+            <li><strong>Linktree:</strong> <a href="https://linktr.ee/ibrarquraishi78" target="_blank" rel="noopener">https://linktr.ee/ibrarquraishi78</a></li>
+            <li><strong>Portfolio:</strong> <a href="https://wasim-ibrar-portfolio.netlify.app" target="_blank" rel="noopener">https://wasim-ibrar-portfolio.netlify.app</a></li>
+            <li><strong>YouTube-inspired site:</strong> <a href="https://wasim-ibrar.vercel.app/" target="_blank" rel="noopener">https://wasim-ibrar.vercel.app/</a></li>
+            <li><strong>Travel & diaries:</strong> <a href="https://wasim-ibrar-diaries.vercel.app/" target="_blank" rel="noopener">https://wasim-ibrar-diaries.vercel.app/</a></li>
+            <li><strong>Amazon author page:</strong> <a href="https://www.amazon.com/author/wasimibrar" target="_blank" rel="noopener">https://www.amazon.com/author/wasimibrar</a></li>
+            <li><strong>Business email:</strong> <a href="mailto:business.ibrar@gmail.com">business.ibrar@gmail.com</a></li>
+          </ul>
+        </section>
+
+        <section id="achievements">
+          <h2 class="section-title">Achievements & highlights</h2>
+          <ul>
+            <li>Author of <em>The Future of AI: How to Learn, Work, and Earn with Artificial Intelligence</em>, available on Amazon (paperback & Kindle).</li>
+            <li>Built a fully functional YouTube API-powered personal website with Ali Abdaal–style layout.</li>
+            <li>Published multiple YouTube Shorts on tech, AI, and science topics.</li>
+            <li>Participated in Internal Smart India Hackathon (SIH 2025) at Maulana Azad National Urdu University (MANUU) with Team Drago (Problem Statement ID: 25019).</li>
+            <li>Developed web projects including a portfolio site, travel diaries site, and a Firebase-powered real-time expense-sharing app.</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2 class="section-title">Contact</h2>
+          <p>For press, collaboration or business inquiries:</p>
+          <p><strong>Email:</strong> <a href="mailto:business.ibrar@gmail.com">business.ibrar@gmail.com</a></p>
+          <p><strong>Other links:</strong> See the infobox on the right for direct links to websites, YouTube and Amazon author page.</p>
+        </section>
+
+        <section id="references">
+          <h2 class="section-title">References & external links</h2>
+          <p class="reference">
+            Primary official links (as provided by the subject):<br>
+            • Portfolio: <a href="https://wasim-ibrar-portfolio.netlify.app" target="_blank" rel="noopener">wasim-ibrar-portfolio.netlify.app</a><br>
+            • YouTube-inspired site: <a href="https://wasim-ibrar.vercel.app/" target="_blank" rel="noopener">wasim-ibrar.vercel.app</a><br>
+            • Travel diaries: <a href="https://wasim-ibrar-diaries.vercel.app/" target="_blank" rel="noopener">wasim-ibrar-diaries.vercel.app</a><br>
+            • Linktree: <a href="https://linktr.ee/ibrarquraishi78" target="_blank" rel="noopener">linktr.ee/ibrarquraishi78</a><br>
+            • Amazon author page & book: <a href="https://www.amazon.com/author/wasimibrar" target="_blank" rel="noopener">amazon.com/author/wasimibrar</a><br>
+            • YouTube channel: <a href="https://www.youtube.com/@ibrarquraishi78" target="_blank" rel="noopener">youtube.com/@ibrarquraishi78</a><br>
+            • Instagram: <a href="https://www.instagram.com/ibrarquraishi78" target="_blank" rel="noopener">instagram.com/ibrarquraishi78</a>
+          </p>
+        </section>
+
+        <footer>
+          <div class="muted">This page was prepared using the subject's provided information. For corrections or updates, contact <a href="mailto:business.ibrar@gmail.com">business.ibrar@gmail.com</a>.</div>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

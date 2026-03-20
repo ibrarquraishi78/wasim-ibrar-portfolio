@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANUU Skyserge 2026 | Fixed-Wing Drone Project</title>
+<meta name="description" content="A successful 3-day drone workshop and flight event at MANUU. Team 1 built and flew a fixed-wing drone under the guidance of Yousuf Sir.">
+
+<style>
+  /* ---------- Base Styling ---------- */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { color: #004080; }
+  a { color: #004080; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Container ---------- */
+  .container { 
+    width: 95%; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 20px 10px; 
+    box-sizing: border-box;
+  }
+
+  /* ---------- Project Header ---------- */
+  .project-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 20px;
+  }
+  .project-header img { height: 60px; border-radius: 8px; }
+  .project-header h1 { font-size: clamp(20px, 5vw, 28px); margin: 0; text-align: left; }
+  .project-header p { font-size: 14px; color: #666; margin: 4px 0 0; }
+
+  /* ---------- Short Description ---------- */
+  .short-description {
+    background: #f2f8ff;
+    border-left: 5px solid #004080;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* ---------- Feature Cards Grid ---------- */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  .feature-box {
+    background: #f9f9f9;
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #0073e6;
+  }
+  
+  /* --- Image Size 4:5 --- */
+  .feature-img-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .feature-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feature-content { padding: 20px; }
+  .feature-box h3 { margin: 0 0 10px 0; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+  .feature-box p { font-size: 14px; color: #555; margin: 0; line-height: 1.5; }
+
+  /* ---------- Lead Developer Section ---------- */
+  .lead-dev {
+    margin: 40px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #004080, #0073e6);
+    color: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+  }
+  .lead-dev h2 { color: white; margin-bottom: 15px; }
+  .dev-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    max-width: 90%;
+  }
+  .dev-card img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid white; object-fit: cover; }
+  .dev-card span { font-size: 14px; text-align: left; }
+
+  /* ---------- Gallery / Screenshots ---------- */
+  .gallery { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 20px; 
+    margin: 30px 0; 
+  }
+  .gallery-item { text-align: center; }
+  
+  .gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  .gallery p { font-size: 13px; color: #777; margin-top: 10px; font-style: italic; }
+
+  /* ---------- Detailed Tech Info ---------- */
+  .tech-info {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+  .tech-tag {
+    display: inline-block;
+    background: #eef5ff;
+    color: #004080;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 8px 10px 0;
+  }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    margin-top: 50px;
+    padding: 30px 20px 15px;
+    background: #f2f2f2;
+    border-top: 1px solid #ddd;
+  }
+  .footer-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; }
+  .footer-left h2 { margin:0; font-size:20px; color:#004080; }
+  .footer-left p { margin:6px 0 0; font-size:14px; color:#444; }
+  .footer-links, .footer-socials { display:flex; gap:16px; flex-wrap:wrap; }
+  .footer-links a, .footer-socials a { font-size:14px; color:#004080; transition: color 0.3s ease; }
+  .footer-bottom { margin-top:20px; text-align:center; font-size:13px; color:#555; border-top:1px solid #ccc; padding-top:10px; }
+
+  /* ---------- Responsive Fixes ---------- */
+  @media(max-width: 768px) {
+    .project-header { flex-direction: column; text-align: center; }
+    .project-header h1 { text-align: center; }
+    .footer-container { flex-direction: column; text-align: center; align-items: center; }
+    
+    /* Center Fix for Mobile View (Feature Boxes) */
+    .feature-content { text-align: center; }
+    .feature-box h3 { justify-content: center; }
+    .features-grid { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="project-header">
+    <img src="images/man folder/man.jpg" alt="MANUU Logo">
+    <div>
+      <h1>MANUU Skyserge 2026: Fixed-Wing Drone Flight</h1>
+      <p><strong>Team:</strong> Team 1 | <strong>Category:</strong> Fixed-Wing Drone | <strong>Organizer:</strong> Polytechnic Dept</p>
+    </div>
+  </div>
+
+  <div class="short-description">
+    <p>MANUU Skyserge 2026 was a 3-day drone workshop and competition organized by the Polytechnic Department for students across all departments. Our team, <b>Team 1</b>, successfully designed, built, and flew a fixed-wing drone, showcasing technical excellence in aerodynamics and UAV control.</p>
+  </div>
+
+  <h2>Project & Event Highlights</h2>
+  <div class="features-grid">
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/skyserge/skys2.jpeg" alt="Workshop">
+      </div>
+      <div class="feature-content">
+        <h3>🛠️ Intensive Workshop</h3>
+        <p>A rigorous 3-day program covering everything from basic electronics and RC systems to advanced flight testing and aerodynamics.</p>
+      </div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/skyserge/sky2.jpeg" alt="Drone Design">
+      </div>
+      <div class="feature-content">
+        <h3>✈️ Fixed-Wing Specialty</h3>
+        <p>Out of 15 competing teams, Team 1 specialized in the complex design and structural assembly of a fixed-wing drone, focusing on stable lift and flight endurance.</p>
+      </div>
+    </div>
+    
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/skyserge/skys3.PNG" alt="Flight Day">
+      </div>
+      <div class="feature-content">
+        <h3>🚀 Successful Takeoff</h3>
+        <p>On the final day of Skyserge, our drone successfully took flight and navigated the MANUU airspace, validating our design and hard work.</p>
+      </div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/skyserge/skys4.jpeg" alt="Yousuf Sir">
+      </div>
+      <div class="feature-content">
+        <h3>👨‍🏫 Expert Guidance</h3>
+        <p>The project was executed under the invaluable mentorship of <b>Yousuf Sir</b> (Convenor), whose guidance was key to our technical success.</p>
+      </div>
+    </div>
+
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/skyserge/skys5.jpeg" alt="VC Certificate">
+      </div>
+      <div class="feature-content">
+        <h3>📜 VC Recognition</h3>
+        <p>A moment of great pride as our team received the workshop certificates directly from the <b>Honorable Vice-Chancellor (VC)</b> of MANUU.</p>
+      </div>
+    </div>
+    
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/skyserge/skys6.jpeg" alt="Team 1">
+      </div>
+      <div class="feature-content">
+        <h3>🤝 Unified Team Effort</h3>
+        <p>As Team 1, we collaborated effectively across various departments, proving that interdisciplinary teamwork is the core of engineering innovation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lead-dev">
+    <h2>Team Lead</h2>
+    <div class="dev-card">
+        <img src="images/team2.jpg" alt="Wasim Ibrar">
+        <span><b>Wasim Ibrar</b><br>Lead (Team 1) & Drone Enthusiast</span>
+    </div>
+  </div>
+
+  <h2>Event Gallery</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+        <img src="images/skyserge/sky7.jpeg" alt="Drone">
+    </div>
+    <div class="gallery-item">
+        <img src="images/skyserge/sky8.jpeg" alt="Certificate">
+    </div>
+    <div class="gallery-item">
+        <img src="images/skyserge/sky9.jpeg" alt="Team-1">
+    </div>
+  </div>
+
+  <div class="tech-info">
+    <h2>Technical Overview</h2>
+    <div class="tech-stack">
+        <span class="tech-tag">Aerodynamics</span>
+        <span class="tech-tag">RC Transmission</span>
+        <span class="tech-tag">BLDC Motor Control</span>
+        <span class="tech-tag">LiPo Power Systems</span>
+        <span class="tech-tag">UAV Structural Design</span>
+    </div>
+    <p>
+      This drone was built using high-strength foam and carbon fiber reinforcements to ensure a high <b>Power-to-Weight ratio</b>. The control surface movements were calibrated using digital servos to provide precise banking and pitching during flight.
+    </p>
+    <p>
+      The workshop highlighted the importance of <b>Center of Gravity (CG)</b> balancing in fixed-wing models. Our team successfully achieved stable flight on the first attempt by optimizing the electronic placement and battery positioning within the fuselage.
+    </p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>Wasim Ibrar</h2>
+      <p>IT Student & Digital Content Creator</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#Projects">Projects</a>
+      <a href="index.html#contactForm">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/ibrarquraishi78/" target="_blank">Instagram</a>
+      <a href="https://linktr.ee/ibrarquraishi78" target="_blank">Linktree</a>
+      <a href="mailto:business.ibrar@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Wasim Ibrar. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>

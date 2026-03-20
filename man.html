@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANUU Alumni Network | Wasim Ibrar Portfolio</title>
+<meta name="description" content="A professional networking platform for Maulana Azad National Urdu University alumni to connect, mentor, and share opportunities.">
+
+<style>
+  /* ---------- Base Styling ---------- */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  h1, h2, h3 { color: #004080; }
+  a { color: #004080; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Container ---------- */
+  .container { 
+    width: 95%; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 20px 10px; 
+    box-sizing: border-box;
+  }
+
+  /* ---------- Project Header ---------- */
+  .project-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 20px;
+  }
+  .project-header img { height: 60px; border-radius: 8px; }
+  .project-header h1 { font-size: clamp(20px, 5vw, 28px); margin: 0; text-align: left; }
+  .project-header p { font-size: 14px; color: #666; margin: 4px 0 0; }
+
+  /* ---------- Short Description ---------- */
+  .short-description {
+    background: #f2f8ff;
+    border-left: 5px solid #004080;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* ---------- Feature Cards Grid ---------- */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+  .feature-box {
+    background: #f9f9f9;
+    padding: 0;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    overflow: hidden; /* Clip image corners */
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #0073e6;
+  }
+  .feature-img-placeholder {
+    width: 100%;
+    height: 160px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 14px;
+    background-size: cover;
+    background-position: center;
+  }
+  .feature-content { padding: 20px; }
+  .feature-box h3 { margin: 0 0 10px 0; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+  .feature-box p { font-size: 14px; color: #555; margin: 0; line-height: 1.5; }
+
+  /* ---------- Lead Developer Section ---------- */
+  .lead-dev {
+    margin: 40px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #004080, #0073e6);
+    color: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+  }
+  .lead-dev h2 { color: white; margin-bottom: 15px; }
+  .dev-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    max-width: 90%;
+  }
+  .dev-card img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid white; object-fit: cover; }
+  .dev-card span { font-size: 14px; text-align: left; }
+
+  /* ---------- Gallery / Screenshots ---------- */
+  .gallery { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 20px; 
+    margin: 30px 0; 
+  }
+  .gallery-item { text-align: center; }
+  .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  .gallery p { font-size: 13px; color: #777; margin-top: 10px; font-style: italic; }
+
+  /* ---------- Detailed Tech Info ---------- */
+  .tech-info {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+  }
+  .tech-tag {
+    display: inline-block;
+    background: #eef5ff;
+    color: #004080;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 8px 10px 0;
+  }
+
+  /* ---------- CTA ---------- */
+  /* ---------- CTA Section & Live Button ---------- */
+  .cta-section {
+    padding: 60px 20px;
+    background: #fdfdfd;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+  .cta-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .cta-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .cta-text {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .live-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #004080;
+    color: #ffffff !important;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(0, 64, 128, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  .live-btn:hover {
+    background: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 64, 128, 0.3);
+    text-decoration: none;
+  }
+  .live-btn:active {
+    transform: translateY(-2px);
+  }
+  /* Subtle pulse animation for the button */
+  @keyframes btnPulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 64, 128, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(0, 64, 128, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 64, 128, 0); }
+  }
+  .live-btn {
+    animation: btnPulse 1s infinite;
+  }
+
+  /* Responsive Fix for Button */
+  @media(max-width: 480px) {
+    .live-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 14px 20px;
+    }
+  }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    margin-top: 50px;
+    padding: 30px 20px 15px;
+    background: #f2f2f2;
+    border-top: 1px solid #ddd;
+  }
+  .footer-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; }
+  .footer-left h2 { margin:0; font-size:20px; color:#004080; }
+  .footer-left p { margin:6px 0 0; font-size:14px; color:#444; }
+  .footer-links, .footer-socials { display:flex; gap:16px; flex-wrap:wrap; }
+  .footer-links a, .footer-socials a { font-size:14px; color:#004080; transition: color 0.3s ease; }
+  .footer-links a:hover, .footer-socials a:hover { color:#0073e6; }
+  .footer-bottom { margin-top:20px; text-align:center; font-size:13px; color:#555; border-top:1px solid #ccc; padding-top:10px; }
+
+  /* ---------- Responsive Fixes ---------- */
+  @media(max-width: 768px) {
+    .project-header { flex-direction: column; text-align: center; }
+    .project-header h1 { text-align: center; }
+    .dev-card { flex-direction: column; border-radius: 20px; padding: 20px; }
+    .footer-container { flex-direction: column; text-align: center; align-items: center; }
+    .footer-links, .footer-socials { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="project-header">
+    <img src="images/man folder/man.jpg" alt="MANUU Logo">
+    <div>
+      <h1>MANUU Alumni Network Platform</h1>
+      <p><strong>Status:</strong> Final Year Project | <strong>Scope:</strong> University-Wide | <strong>Lead:</strong> Wasim Ibrar</p>
+    </div>
+  </div>
+
+  <div class="short-description">
+    <p>The MANUU Alumni Network is a centralized digital ecosystem designed to bridge the professional gap between Maulana Azad National Urdu University graduates and current students. It focuses on fostering mentorship, streamlining career opportunities, and building a sustainable university community.</p>
+  </div>
+
+  <h2>Core Platform Features</h2>
+  <div class="features-grid">
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="images/man folder/auth..png" alt="Auth Feature" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="feature-content">
+        <h3>🔐 Secure Authentication</h3>
+        <p>Implemented a robust multi-level authentication system for Alumni and Students, featuring enrollment-based verification to ensure community integrity.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="https://via.placeholder.com/400x200/eef5ff/004080?text=Alumni+Directory+UI" alt="Directory Feature" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="feature-content">
+        <h3>📂 Smart Alumni Directory</h3>
+        <p>Integrated advanced search algorithms allowing users to filter mentors by graduation year, specific department, industry expertise, or current location.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="https://via.placeholder.com/400x200/eef5ff/004080?text=Messaging+System+UI" alt="Chat Feature" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="feature-content">
+        <h3>💬 Real-time Messaging</h3>
+        <p>A private networking interface that facilitates direct mentorship. Students can seek career guidance without the need for exchanging personal contact details.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="https://via.placeholder.com/400x200/eef5ff/004080?text=Job+Portal+UI" alt="Jobs Feature" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="feature-content">
+        <h3>💼 Career Opportunities</h3>
+        <p>A dedicated job board where alumni can post exclusive vacancies and internal referrals, giving MANUU students a competitive edge in the job market.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="https://via.placeholder.com/400x200/eef5ff/004080?text=User+Profile+UI" alt="Profile Feature" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="feature-content">
+        <h3>👤 Professional Profiles</h3>
+        <p>Comprehensive user dashboards featuring professional bios, skill sets, and social integration with LinkedIn and GitHub for professional visibility.</p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <div class="feature-img-placeholder">
+        <img src="https://via.placeholder.com/400x200/eef5ff/004080?text=News+Feed+UI" alt="Feed Feature" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="feature-content">
+        <h3>📢 Announcements Feed</h3>
+        <p>A real-time notification hub for university updates, alumni achievements, and upcoming networking events or webinars.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="lead-dev">
+    <h2>Project Leader</h2>
+    <div class="dev-card">
+        <img src="images/team2.jpg" alt="Wasim Ibrar">
+        <span><b>Wasim Ibrar</b><br>Lead Full Stack Developer & IT Student</span>
+    </div>
+  </div>
+
+  <h2>Application Walkthrough</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+        <img src="/images/alumni-home.jpg" alt="Home Screen">
+        <p>Core Platform Dashboard</p>
+    </div>
+    <div class="gallery-item">
+        <img src="/images/alumni-chat.jpg" alt="Messaging Screen">
+        <p>Mentorship Interface</p>
+    </div>
+    <div class="gallery-item">
+        <img src="/images/alumni-directory.jpg" alt="Search Screen">
+        <p>Filter-based Directory</p>
+    </div>
+  </div>
+
+  <div class="tech-info">
+    <h2>Technical Overview</h2>
+    <div class="tech-stack">
+        <span class="tech-tag">HTML5 / CSS3</span>
+        <span class="tech-tag">JavaScript (ES6+)</span>
+        <span class="tech-tag">Python (Django)</span>
+        <span class="tech-tag">MySQL Database</span>
+        <span class="tech-tag">Git / GitHub</span>
+    </div>
+    <p>
+      This platform is built with a focus on high scalability and security. The frontend utilizes <b>Responsive Web Design (RWD)</b> to ensure accessibility across mobile, tablet, and desktop devices. The backend is powered by <b>Secure Session Management</b> protocols to safeguard sensitive alumni data.
+    </p>
+    <p>
+      To enhance user experience, <b>Asynchronous JavaScript (AJAX)</b> is utilized for dynamic data retrieval, allowing users to browse the alumni directory without page reloads. Future iterations aim to include AI-driven job matching and alumni-led webinar integration.
+    </p>
+  </div>
+</div>
+<!--CTA Section-->
+<div class="cta-section">
+    <div class="cta-container">
+      <h2 class="cta-title">Want to see the Network in action?</h2>
+      <p class="cta-text">Experience the live platform and explore the MANUU community first-hand.</p>
+      <div class="btn-wrapper">
+        <a href="https://manuu-alumni-network.web.app/" class="live-btn">
+          <span>View Live Website</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>Wasim Ibrar</h2>
+      <p>IT Student & Digital Content Creator</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#Projects">Projects</a>
+      <a href="index.html#contactForm">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/ibrarquraishi78/" target="_blank">Instagram</a>
+      <a href="https://linktr.ee/ibrarquraishi78" target="_blank">Linktree</a>
+      <a href="mailto:business.ibrar@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Wasim Ibrar. All Rights Reserved.
+  </div>
+</footer>
+
+</body>
+</html>
